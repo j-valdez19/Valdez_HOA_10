@@ -1,0 +1,22 @@
+  - name: Installing Prerequisites for Elastic Stack Ubuntu
+    apt:
+      name:
+        - openjdk-8-jdk
+        - apt-transport-https
+      state: latest
+
+  - name: Installing Prerequisites for Elastic Stack CentOS
+    yum:
+      name:
+        - java-1.8.0-openjdk
+        - epel-release
+
+  - name: Installing Elastic Stack
+    apt:
+      name:
+        - elasticsearch
+        - logstash
+        - kibana
+      state: latest
+
+

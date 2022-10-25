@@ -1,0 +1,16 @@
+
+  - name: Installing Prerequisites for Elastic Stack CentOS
+    yum:
+      name:
+        - java-1.8.0-openjdk
+        - epel-release
+
+  - name: Installing Elastic Stack
+    yum:
+      name:
+        - elasticsearch
+        - logstash
+        - kibana
+      state: latest
+
+
